@@ -1,0 +1,60 @@
+
+html {   
+    /* we hide extra canvas if screen is small */
+    overflow: hidden;
+    background-color: snow;
+}
+
+/* This is the canvas element that all */
+/* virtual elements are rendered to    */
+#canvas{
+    padding-left: 0;
+    padding-right: 0;
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    border: 4px solid #ccc;
+    background-color: snow;
+}
+
+input {
+    font: 14px sans-serif;
+}
+
+button {
+    left: 120;
+    top: 10;
+    width: 140;
+    height: 50;
+    border-radius: 15px;
+}
+
+player {
+    border-color: black;
+    width: 110px;
+    height: 35px; 
+}
+
+die {
+    top: 70;
+    width: 72;
+    height: 72;
+    border-radius: 8px; 
+}
+  
+score {
+    width: 95px;
+    height: 80;
+    border-radius: 8px;
+    font-size: 12;
+    color:black;
+}
+popup {
+    left: 45px;
+    top: 78px;
+    width: 300px;
+    height: 300px;
+    border-radius: 30px;
+    font-size: 16;
+    stroke: black;
+}

@@ -1,0 +1,74 @@
+<!DOCTYPE html5>
+
+<head>
+
+    <title>VCOM Dice Game</title>
+
+    <meta name=viewport content='width=device-width, initial-scale=1.0, user-scalable=no'>
+    <!-- Suppress browser request for favicon.ico -->
+    <link rel="shortcut icon"type="image/x-icon" href="data:image/x-icon;,">
+    <link rel=stylesheet href=./styles.css>
+    <script type=module src=./public/app.js></script>
+
+    <!-- our media files ... (sounds) -->
+    <audio id=cluckSound src=./public/media/Cluck.mp3 preload=auto></audio>
+    <audio id=dohhSound src=./public/media/Do_h.mp3 preload=auto></audio>
+    <audio id=heheSound src=./public/media/Hehe.mp3 preload=auto></audio>
+    <audio id=rollSound src=./public/media/RollDice.mp3 preload=auto></audio>
+    <audio id=selectSound src=./public/media/Select.mp3 preload=auto></audio>
+    <audio id=woohooSound src=./public/media/Woohoo.mp3 preload=auto></audio>
+    <audio id=noooSound src=./public/media/Nooo.mp3 preload=auto></audio>
+</head>
+
+<body>
+
+    <!-- This canvas is our only active DOM element. 
+        All other tags below will be ignored by the DOM. 
+        That is, they will be converted to javascript objects. 
+        Objects that can be selected and examined, but will 
+        not be placed in the DOMs render tree. 
+        We use them to 'hydrate' virtual elements that will 
+        be rendered directly to this canvas.   
+        SEE: /src/view/container.ts for more details. 
+    -->
+    <canvas id=canvas width=380 height=550></canvas>
+
+    <components id=components>
+        <surface id=surface>
+
+            <popup id=popup></popup>
+
+            <button id=rollbutton>Roll Da Dice</button>
+
+            <player idx=0 id=player0 left=55 top=30 color=brown>Nick</player>
+            <player idx=1 id=player1 left=55 top=55 color=green>Sue</player>
+            <player idx=2 id=player2 left=340 top=30 color=blue>Carter</player>
+            <player idx=3 id=player3 left=340 top=55 color=brown>Marie</player>
+
+            <die idx=0 id=die0 left=5> </die>
+            <die idx=1 id=die1 left=80> </die>
+            <die idx=2 id=die2 left=155> </die>
+            <die idx=3 id=die3 left=230> </die>
+            <die idx=4 id=die4 left=305> </die>
+
+            <score idx=0 id=ones left=10 top=150 isleft>Ones</score>
+            <score idx=1 id=twos left=85 top=150>Twos</score>
+            <score idx=2 id=threes left=10 top=240 isleft>Threes</score>
+            <score idx=3 id=fours left=85 top=240>Fours</score>
+            <score idx=4 id=fives left=10 top=330 isleft>Fives</score>
+            <score idx=5 id=sixes left=85 top=330>Sixes</score>
+            
+            <score idx=6 id=three-o-kind left=200 top=150 isleft>Three O-Kind</score>
+            <score idx=7 id=four-o-kind left=275 top=150>Four O-Kind</score>
+            <score idx=8 id=small-straight left=200 top=240 isleft>Small Straight</score>
+            <score idx=9 id=large-straight left=275 top=240>Large Straight</score>
+            <score idx=10 id=full-house left=200 top=330 isleft>Full House</score>
+            <score idx=11 id=five-o-kind left=275 top=330>Five O-Kind</score>
+            <score idx=12 id=chance left=200 top=420 isleft>Chance</score>
+
+            <label idx=-1 id=leftscore color=gray left=100 top=480 width=180 height=85>^ total = 0</label>
+            <label idx=-1 id=infolabel left=190 top=540 width=500 height=35> </label>
+
+        </surface>
+    </components>
+</body>

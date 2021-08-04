@@ -1,0 +1,20 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "type": "shell",
+            "command": "deployctl",
+            "options": {"cwd": "./public"},
+            "args": [
+                "run",
+                "--watch",
+                "mod.js"
+            ],
+
+            "problemMatcher": [
+                "$deno"
+            ],
+            "label": "deployctl run"
+        }
+    ]
+}
