@@ -6,10 +6,10 @@
 
 * The virtual element objects are hydrated from HTML and css.
 
-[![dice](https://github.com/nhrones/Dice/blob/master/dice.jpg)]()
+[![dice](https://github.com/nhrones/Dice/blob/master/dice.jpg)](https://nhrones.github.io/Dice/)
 
 ## Run Online
-https://dice.deno.dev
+https://nhrones.github.io/Dice/
 
 Usage:
 ```
