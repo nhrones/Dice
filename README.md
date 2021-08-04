@@ -6,7 +6,7 @@
 
 * The virtual element objects are hydrated from HTML and css.
 
-[![dice](https://github.com/nhrones/DenoDice/blob/main/dice.jpg)](https://dice.deno.dev)
+[![dice](https://github.com/nhrones/Dice/blob/master/dice.jpg)]()
 
 ## Run Online
 https://dice.deno.dev
