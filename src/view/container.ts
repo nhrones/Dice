@@ -1,7 +1,7 @@
 
 import { $, DEV } from '../globals.js'
 import { player, label, popup, button, die, score } from '../framework/view/viewFactory.js'
-import { initDomEventHandlers } from '../framework/view/domEventHandlers.js'
+import { initHandlers } from '../framework/view/domEvents.js'
 import ViewElements from '../framework/view/viewElements.js'
 import { IElementDescriptor } from '../types.js'
 import { compileUI } from '../framework/compiler/compiler.js'
@@ -53,7 +53,7 @@ export class Container {
         // This module handles all DOM events for our canvas.    
         // These methods discriminate which ActiveView(virtual-element)    
         // have been touched, clicked or hovered over. 
-        initDomEventHandlers()
+        initHandlers()
     }
 
     /** private Container constructor for singleton instance
@@ -72,23 +72,21 @@ export class Container {
     
     /** 
      * Build all virtual UI elements from IElementDescriptors    
-     * Normal operation will pull the collection of descriptors    
-     * from the localStorage.  
+     * Normal operation gets collection of descriptors from localStorage.  
      * 
-     * In DEV mode, or if no store is found, we compile the descriptor     
-     * objects collectionby examining the index.html and all stylesheets     
-     * in the document. 
+     * In DEV mode, or if no store is found, we compile the descriptors     
+     * by examining index.html and any stylesheets referenced in index.html . 
      *    
-     * This compile operation will store the collection in localStorage with    
-     * the name 'elementDescriptors'.
+     * This compile operation will store the descriptors collection in localStorage    
+     * with the name 'elementDescriptors'.
      * 
      * Once we have elementDescriptors parsed as 'nodes', we proceed    
      * to hydrate each as an active viewElement object, and place each    
-     * in this containers 'viewElements' collection.
+     * in the containers 'viewElements' collection.
      * 
      * Each viewElement contains a Path2D object. This path is used to     
-     * render and and 'hit-test' the vitual UI element in the main canvas     
-     * mouseEvents (SEE: /framework/view/domEventHandlers.ts).
+     * render and to 'hit-test' the vitual UI element in the main canvas     
+     * mouseEvents (SEE: /framework/view/domEvents.ts).
      */
     hydrateUI() {
         

@@ -11,7 +11,7 @@ let viewElements;
 let canvas;
 const left = 0;
 const right = 2;
-export function initDomEventHandlers() {
+export function initHandlers() {
     canvas = container.canvas;
     viewElements = container.viewElements;
     canvas.addEventListener('mousedown', (e) => {

@@ -1,6 +1,6 @@
 import { $, DEV } from '../globals.js';
 import { player, label, popup, button, die, score } from '../framework/view/viewFactory.js';
-import { initDomEventHandlers } from '../framework/view/domEventHandlers.js';
+import { initHandlers } from '../framework/view/domEvents.js';
 import ViewElements from '../framework/view/viewElements.js';
 import { compileUI } from '../framework/compiler/compiler.js';
 export var ctx;
@@ -21,7 +21,7 @@ export class Container {
             Container._instance = new Container(canvas, color);
             container = Container._instance;
         }
-        initDomEventHandlers();
+        initHandlers();
     }
     hydrateUI() {
         let nodes = (DEV) ? null : JSON.parse(localStorage.getItem('elementDescriptors'));

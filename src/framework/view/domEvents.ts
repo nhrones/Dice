@@ -35,7 +35,7 @@ const right = 2
  *      canvas.mousedown + canvas.touchstart => handleClickOrTouch()    
  *      canvas.mousemove => handleMouseMove     
  */
-export function initDomEventHandlers(): void {
+export function initHandlers(): void {
 
     // setup local context from our host Container
     canvas = container.canvas
@@ -74,10 +74,6 @@ export function initDomEventHandlers(): void {
         }
     })
 }
-
-///////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\
-//                  local functions                 \\
-///////////////////////////\\\\\\\\\\\\\\\\\\\\\\\\\\\
 
 /** Handles canvas mouse-move event.     
  * Provides logic to emulate 'onmouseenter', and        
