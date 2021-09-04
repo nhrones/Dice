@@ -13,7 +13,7 @@ import { IView } from '../../types.js';
 // values re-used repeatedly in event handlers
 let x: number = 0
 let y: number = 0
-let boundingRect: ClientRect | null = null
+let boundingRect: DOMRect | null = null
 let hit = false
 let node: IView | null = null
 let hoveredNode: IView | null = null
@@ -84,8 +84,8 @@ export function initHandlers(): void {
 function handleMouseMove(evt: MouseEvent, ) {
     
     boundingRect = canvas.getBoundingClientRect()
-    x = evt.clientX - boundingRect.left
-    y = evt.clientY - boundingRect.top
+    x = evt.clientX - boundingRect.x
+    y = evt.clientY - boundingRect.y
     // test for hovered
     node = null
     
