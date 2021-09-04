@@ -32,8 +32,8 @@ export function initHandlers() {
 }
 function handleMouseMove(evt) {
     boundingRect = canvas.getBoundingClientRect();
-    x = evt.clientX - boundingRect.left;
-    y = evt.clientY - boundingRect.top;
+    x = evt.clientX - boundingRect.x;
+    y = evt.clientY - boundingRect.y;
     node = null;
     for (let [Id, element] of viewElements.activeNodes) {
         if (ctx.isPointInPath(element.path, x, y)) {
