@@ -1,5 +1,5 @@
 
-export let DEV = true // true = compile; false = compile if storage not found
+export let DEV = false // true = compile; false = compile if storage not found
 
 export { events, topic } from './framework/model/events.js'
 
