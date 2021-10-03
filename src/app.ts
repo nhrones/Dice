@@ -7,7 +7,13 @@ thisPlayer.id = '0'
 
 // wait for it ...
 window.addEventListener('DOMContentLoaded', (e) => {
-    
+    navigator.serviceWorker.register('/public/sw.js').then(function(registration) {
+        // Registration was successful
+        console.log('ServiceWorker registration successful with scope: ', registration.scope);
+      }, function(err) {
+        // registration failed :(
+        console.log('ServiceWorker registration failed: ', err);
+      });
     // build our view container
     Container.init($('canvas') as HTMLCanvasElement, 'snow')
 
