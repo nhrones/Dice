@@ -26,9 +26,9 @@ These objects exibit most of the functionality of DOM elements including:<br/>
     hit testing, click/touch, mouse-in/out, hovered, events!<br/>
     The container and all objects are decoupled on an internal event-bus<br/>
     Objects are compiled and hydrated from custom html and css (svelte-like)<br/>
-    Compilation produces element-descripter objects. Compilation is controlled by<br/>
-    a DEV flag, and element-descripter objects are persisted in localStorage.<br/>
-    Hydration uses these descripter objects to build virtual dom-like viewElement objects .<br/>
+    Compilation produces element-descriptor objects. Compilation is controlled by<br/>
+    a DEV flag, and element-descriptor objects are persisted in localStorage.<br/>
+    Hydration uses these descriptor objects to build virtual dom-like viewElement objects .<br/>
     The dice objects build their own images during hydration.<br/> 
     Each viewElement instantiates and initializes its own backing view-model during hydration.<br/> 
     Geometric attributes from html/css are used to configure Path2D objects for each.<br/>
