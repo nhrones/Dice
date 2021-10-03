@@ -15,7 +15,7 @@ Usage:
 ```
 Click the 'Roll Button' to start.    
 After each roll of the dice, you can 'click' a die to 'freeze' it.    
-Click again to toggle it.  (on phone/touch you may need to long-touch to select die)   
+Click again to toggle it.  
 After three rolls, you must select a score item.
 ```
 ## Developed using my own custom framework (Surface)
