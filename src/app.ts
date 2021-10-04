@@ -7,10 +7,10 @@ thisPlayer.id = '0'
 
 // wait for it ...
 window.addEventListener('DOMContentLoaded', (e) => {
-    navigator.serviceWorker.register('/public/sw.js').then(function(registration) {
+    navigator.serviceWorker.register('/public/sw.js').then((registration) => {
         // Registration was successful
         console.log('ServiceWorker registration successful with scope: ', registration.scope);
-      }, function(err) {
+      }, (err) => {
         // registration failed :(
         console.log('ServiceWorker registration failed: ', err);
       });

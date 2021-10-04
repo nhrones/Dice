@@ -60,11 +60,11 @@ export function initHandlers(): void {
         if (e.button === left) handleClickOrTouch(e.pageX, e.pageY)  
     }, false)
 
-    // register a handler for our canvas' touchstart event
-    canvas.addEventListener('touchstart', (e: TouchEvent) => {
-        e.preventDefault()
-        handleClickOrTouch(e.changedTouches[0].pageX, e.changedTouches[0].pageY)
-    }, { passive: true })
+    // // register a handler for our canvas' touchstart event
+    // canvas.addEventListener('touchstart', (e: TouchEvent) => {
+    //     e.preventDefault()
+    //     handleClickOrTouch(e.changedTouches[0].pageX, e.changedTouches[0].pageY)
+    // }, { passive: true })
 
     // register a handler for our canvas' mousemove event
     canvas.addEventListener('mousemove', (e: MouseEvent) => {

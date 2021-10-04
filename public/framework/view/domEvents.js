@@ -19,10 +19,6 @@ export function initHandlers() {
         if (e.button === left)
             handleClickOrTouch(e.pageX, e.pageY);
     }, false);
-    canvas.addEventListener('touchstart', (e) => {
-        e.preventDefault();
-        handleClickOrTouch(e.changedTouches[0].pageX, e.changedTouches[0].pageY);
-    }, { passive: true });
     canvas.addEventListener('mousemove', (e) => {
         e.preventDefault();
         if (container.hasVisiblePopup === false) {

@@ -1,4 +1,4 @@
-export let DEV = true;
+export let DEV = false;
 export { events, topic } from './framework/model/events.js';
 export const $ = (id) => document.getElementById(id);
 export let thisPlayer = {
